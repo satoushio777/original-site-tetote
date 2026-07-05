@@ -1,0 +1,372 @@
+@charset "UTF-8";
+
+html {
+    /* font-size: 62.5%; */
+    /*16px × 62.5% = 10pxです*/
+    font-size: 100%;
+}
+
+
+/**********共通項目ここから*****************/
+body {
+    font-size: 1.4rem;
+    /*14px */
+    color: #3D3732;
+    font-family: "Noto Sans JP", "Yu Gothic", "游ゴシック", "YuGothic", sans-serif;
+    font-weight: 500;
+    /* または normal */
+    letter-spacing: 0.1em;
+    background-color: #FFF9F1;
+
+
+    /* font-size: 1rem;14.4px */
+    /* color: #333; */
+    /* font-family: "Yu Gothic", "游ゴシック", "YuGothic", sans-serif; */
+    /* font-weight: 500; または normal */
+    /* letter-spacing: 0.1em; */
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+}
+
+/*h2共通指示*/
+h2 {
+    font-size: 3rem;/*36px*/
+    padding-block: 20px;
+    text-align: center;
+    color: #FF8200;
+}
+
+h3 {
+    text-align: center;
+    padding-block: 40px;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3%;
+}
+
+.section-subtitle {
+    font-size: 1.25rem;
+}
+
+
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    padding-inline: 3%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.95) 0%,
+        rgba(255, 255, 255, 0.75) 70%,
+        rgba(255, 255, 255, 0) 100%
+    );
+}
+
+/*logo調整*/
+.header__logo {
+    height: 80px;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.header__logo-link {
+    display: block;
+    height: 100%;
+}
+
+.header__logo-image {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+
+.header__nav {
+    margin-right: 30px;
+    font-size: 24px;
+}
+
+.nav__content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.header__nav-list {
+    display: flex;
+}
+
+.header__nav-item {
+    padding-block: 10px;
+    margin-right: 8px;
+}
+
+.header__nav-link {
+    color: #FF8200;
+    text-decoration: none;
+    padding: 10px;
+     /* ふわっと変化 */
+    transition: color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+/*ホバーしたら文字色が変わる*/
+.header__nav-link:hover {
+    color: #FFF9F1;
+    background-color: #FF8200;
+    border-radius: 30px;
+}
+
+.header__contact-link{
+    text-decoration: none;
+    background: linear-gradient(180deg, #F8B983 0%, #FF8200 100%);
+    color: #FFF9F1;
+    padding: 32px;
+    border-radius: 0 0 30px 30px;
+}
+
+.header__contact-link:hover {
+    background: linear-gradient(180deg, #9BC8B0 0%, #5B9A7A 100%);
+    background: linear-gradient(180deg, #FFF3A3 0%, #FFD233 100%);
+    color: #5B9A7A;
+    transition: color 0.3s ease,
+}
+
+
+/*-------------------------------------------
+main---ファーストビュー
+-------------------------------------------*/
+.fv {
+    height: 100vh;
+    /* height: 100dvh; */
+    position: relative;
+}
+
+.fv__image {
+    width: 100%;
+    height: 100vh;
+    object-position: center bottom;/* 下側を優先して表示 */
+}
+
+.fv__content {
+    position: absolute;
+    bottom: 0;
+    left: 3%;
+    z-index: 5;
+    color: #FFF9F1;
+    padding: 2%;
+}
+
+.fv__catch {
+    background: linear-gradient(
+    180deg,
+    rgba(248, 185, 131, 0.75) 0%,
+    rgba(255, 130, 0, 0.75) 100%
+);
+    font-size: 64px;
+    text-shadow: 4px 4px 6px rgba(61, 55, 50, 0.45);
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.fv__subcatch {
+    background: linear-gradient(
+    180deg,
+    rgba(248, 185, 131, 0.75) 0%,
+    rgba(255, 130, 0, 0.75) 100%
+);
+    text-shadow: 4px 4px 6px rgba(61, 55, 50, 0.45);
+    font-size: 1.2rem;
+}
+
+/*-------------------------------------------
+main---ABOUT
+-------------------------------------------*/
+.about__out {
+    background: linear-gradient(180deg, #DFF0B4 0%, #FFF9F1 100%);
+}
+
+.about__body {
+    display: flex;
+    align-items: center;
+    padding-block: 100px;
+}
+
+.flex-left {
+    background-color: #FFF;
+    padding: 70px 5%;
+    width: 80%;
+}
+.about__title {
+    text-align: left;
+}
+
+.about__text p {
+    padding-bottom: 30px;
+    font-size: 0.9rem;
+}
+
+.flex-right {
+    width: 70%;
+    margin-left: -30px;
+}
+
+.about__image {
+    height: 400px;
+}
+
+.about__image img {
+    width: 100%;
+    height: 100%;
+}
+
+/*-------------------------------------------
+main---ABOUT---お悩み
+-------------------------------------------*/
+.about__chat {
+    margin-bottom: 100px;
+}
+
+.about__chat-list {
+    margin-bottom: 100px;
+}
+
+.about__chat-item--left {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.about__chat-item--left img {
+    width: 120px;
+    height: 120px;
+    border-radius: 9999px;
+}
+
+.about__chat-item--right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.about__chat-item--right img {
+    width: 120px;
+    height: 120px;
+    border-radius: 9999px;
+}
+
+.about__chat-text {
+    background-color: #FFF9F1;
+    padding: 40px;
+    border-radius: 20px;
+    margin-inline: 20px;
+    height: 100px;
+    line-height: 0.6;
+    position: relative;
+}
+
+/* 左側の吹き出し：画像側に三角を出す */
+.about__chat-item--left .about__chat-text::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-right: 15px solid #FFF9F1;
+}
+
+/* 右側の吹き出し：画像側に三角を出す */
+.about__chat-item--right .about__chat-text::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 15px solid #FFF9F1;
+}
+
+.about__chat-message {
+    background-color: #FFF;
+    padding: 5%;
+    /* border-radius: 40px; */
+    box-shadow: 0 8px 16px rgba(61, 55, 50, 0.18);
+}
+
+/*-------------------------------------------
+main---ABOUT---Point
+-------------------------------------------*/
+.about__point {
+    display: flex;
+}
+
+
+
+/*-------------------------------------------
+スマホ表示ここから
+-------------------------------------------*/
+@media (max-width: 900px) {
+
+    p {
+        font-size: 1rem;
+    }
+    
+    .wrapper {
+        padding: 0 5%;
+    }
+
+    .sec-title {
+        font-size: 1.75rem;/*28px*/
+        margin-bottom: 60px;
+    }
+
+
+    .about__body {
+        flex-direction: column;
+        padding: 60px 8%;
+    }
+
+.flex-left {
+    width: 100%;
+    padding: 5%;
+}
+
+.about__text p {
+    padding-bottom: 18px;
+}
+
+.flex-right {
+    width: 100%;
+    margin: 0;
+}
+
+
+
+}
