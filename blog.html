@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="学校以外の第三の居場所、教育支援室。">
+    <title>BLOG | Te to Te</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.png">
+</head>
+
+<body>
+    <!--HEADER-->
+    <header id="header">
+        <div class="header__inner">
+
+            <!-- <h1 class="header__logo"> -->
+            <div class="header__logo">
+                <a href="index.html" class="header__logo-link">
+                    <img src="img/logo.png" alt="Te to Te" class="header__logo-image">
+                </a>
+            </div>
+
+            <!--nav-->
+            <div class="nav__content">
+
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item"><a href="index.html#about" class="header__nav-link">ABOUT</a></li>
+                        <li class="header__nav-item"><a href="index.html#support" class="header__nav-link">SUPPORT</a>
+                        </li>
+                        <li class="header__nav-item"><a href="index.html#blog" class="header__nav-link">BLOG</a></li>
+                        <li class="header__nav-item"><a href="index.html#faq" class="header__nav-link">FAQ</a></li>
+                    </ul>
+                </nav>
+
+                <!-- PC表示用のお問合せボタン -->
+                <div class="header__contact">
+                    <a href="contact.html" class="header__contact-link">お問合わせ</a>
+                </div>
+            </div>
+
+            <!-- スマホ表示用--下部ボタン -->
+            <div class="header__mobile-cta">
+                <a href="tel:0470000000" class="header__phone-link">
+                    <span aria-hidden="true">☎</span>
+                    お電話
+                </a>
+                <a href="contact.html" class="header__mail-link">
+                    <span aria-hidden="true">✉</span>
+                    お問合せ
+                </a>
+            </div>
+        </div>
+
+        <!-- ハンバーガーボタン -->
+        <div class="toggle_btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- スマホメニューの背景 -->
+        <div id="mask"></div>
+    </header>
+
+    <main>
+        <!--FV-->
+        <section class="fv fv--contact">
+            <div class="fv__inner">
+                <!--PC用メインビジュアル-->
+                <div class="fv__image-wrapper-pc">
+                    <img src="img/fv.jpeg" alt="手をつないで外で過ごす子どもたちと大人たち" class="fv__image">
+                </div>
+
+                <!--スマホ用メインビジュアル-->
+                <div class="fv__image-wrapper-sp">
+                    <img src="img/sp_fv.JPG" alt="手をつないで外で過ごす子どもたちと大人たち" class="fv__image">
+                </div>
+
+                <div class="fv__content">
+                    <h1 class="fv__title">BLOG</h1>
+                    <p class="fv__subtitle">
+                        お知らせやTe to Teの日常がご確認いただけます
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!--BLOG-->
+        <section id="blog" class="blog blog--page">
+            <div class="blog__inner">
+
+                <ul class="blog__list">
+
+                    <!-- ブログ記事01 -->
+                    <li class="blog__item">
+                        <a href="#" class="blog__link">
+                            <!-- <a href="blog-detail01.html" class="blog__link"> -->
+                            <div class="blog__image-wrapper">
+                                <img src="img/blog/blog01.png" alt="子どもたちが制作した作品" class="blog__image">
+                            </div>
+
+                            <div class="blog__body">
+                                <h2 class="blog__title">今月の創作活動</h2>
+                                <time class="blog__date" datetime="2026-08-01">
+                                    2026/08/01
+                                </time>
+                            </div>
+                        </a>
+                    </li>
+
+                    <!-- ブログ記事02 -->
+                    <li class="blog__item">
+                        <a href="#" class="blog__link">
+                            <div class="blog__image-wrapper">
+                                <img src="img/blog/blog02.png" alt="水槽の中を泳ぐメダカ" class="blog__image">
+                            </div>
+
+                            <div class="blog__body">
+                                <h2 class="blog__title">
+                                    ソーシャルワーカーからお知らせ
+                                </h2>
+                                <time class="blog__date" datetime="2026-08-01">
+                                    2026/08/01
+                                </time>
+                            </div>
+                        </a>
+                    </li>
+
+                    <!-- ブログ記事03 -->
+                    <li class="blog__item">
+                        <a href="#" class="blog__link">
+                            <div class="blog__image-wrapper">
+                                <img src="img/blog/blog03.png" alt="一面に咲く菜の花" class="blog__image">
+                            </div>
+
+                            <div class="blog__body">
+                                <h2 class="blog__title">
+                                    ふれあいタイムで春を見つけました
+                                </h2>
+                                <time class="blog__date" datetime="2026-08-01">
+                                    2026/08/01
+                                </time>
+                            </div>
+                        </a>
+                    </li>
+
+                    <!-- ブログ記事04 -->
+                    <li class="blog__item">
+                        <a href="#" class="blog__link">
+                            <div class="blog__image-wrapper">
+                                <img src="img/blog/blog04.png" alt="空にかかる虹" class="blog__image">
+                            </div>
+
+                            <div class="blog__body">
+                                <h2 class="blog__title">地域コミュニティのご紹介</h2>
+                                <time class="blog__date" datetime="2026-08-01">
+                                    2026/08/01
+                                </time>
+                            </div>
+                        </a>
+                    </li>
+
+                    <!-- ブログ記事05 -->
+                    <li class="blog__item">
+                        <a href="#" class="blog__link">
+                            <div class="blog__image-wrapper">
+                                <img src="img/blog/blog05.png" alt="ピクニック用品とお弁当" class="blog__image">
+                            </div>
+
+                            <div class="blog__body">
+                                <h2 class="blog__title">プチ遠足に行きました</h2>
+                                <time class="blog__date" datetime="2026-08-01">
+                                    2026/08/01
+                                </time>
+                            </div>
+                        </a>
+                    </li>
+
+                    <!-- ブログ記事06 -->
+                    <li class="blog__item">
+                        <a href="#" class="blog__link">
+                            <div class="blog__image-wrapper">
+                                <img src="img/blog/blog06.jpg" alt="カレンダーと筆記用具" class="blog__image">
+                            </div>
+
+                            <div class="blog__body">
+                                <h2 class="blog__title">年間行事のご案内</h2>
+                                <time class="blog__date" datetime="2026-08-01">
+                                    2026/08/01
+                                </time>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <!-- HOMEボタン -->
+                <div class="blog__home">
+                    <a href="index.html" class="blog__home-link">
+                        HOME
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!--FOOTER-->
+    <footer id="footer">
+        <div class="footer__inner-wrapper">
+
+            <!-- 左側：施設情報 -->
+            <div class="footer__info">
+                <a href="#" class="footer__logo">
+                    <img src="img/logo.png" alt="Te to Te 教育支援センター" class="footer__logo-image">
+                </a>
+
+                <address class="footer__address">
+                    <p class="footer__postal">〒XXX-XXXX</p>
+                    <p class="footer__location">神奈川県横浜市XX区XX</p>
+                    <p class="footer__tel">
+                        <a href="tel:047XXXXXXXX" class="footer__tel-link">
+                            047-XXXX-XXXX
+                        </a>
+                    </p>
+                    <p class="footer__hours">9:00〜15:00</p>
+                    <p class="footer__note">
+                        ※受付時間外はお問い合わせフォーム<br>
+                        をご利用ください。
+                    </p>
+                </address>
+            </div>
+
+            <!-- 右側：案内文・リンク -->
+            <div class="footer__content">
+                <p class="footer__lead">
+                    ご不安なことは、お気軽にご相談ください。<br>
+                    ご見学・ご相談は無料です。
+                </p>
+
+                <nav class="footer__nav" aria-label="フッターナビゲーション">
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item">
+                            <a href="index.html#faq" class="footer__nav-link">よくある質問</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#" class="footer__nav-link">プライバシーポリシー</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
+        <div class="footer__bottom">
+            <small class="footer__copyright">&copy;Te to Te</small>
+        </div>
+    </footer>
+
+    <!-- ページトップボタン -->
+    <a href="#" id="page-top" class="page-top" aria-label="ページ上部へ戻る">
+        <span class="page-top__arrow" aria-hidden="true"></span>
+        <span class="page-top__text">Top</span>
+    </a>
+
+
+    <!-- jQueryを先に読み込む -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- 自分のJavaScriptを後に読み込む -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

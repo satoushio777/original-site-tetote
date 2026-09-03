@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="学校以外の第三の居場所、教育支援室。">
+    <title>お問合せ | Te to Te</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.png">
+</head>
+
+<body>
+    <!--HEADER-->
+    <header id="header">
+        <div class="header__inner">
+
+            <!-- <h1 class="header__logo"> -->
+            <div class="header__logo">
+                <a href="index.html" class="header__logo-link">
+                    <img src="img/logo.png" alt="Te to Te" class="header__logo-image">
+                </a>
+            </div>
+
+            <!--nav-->
+            <div class="nav__content">
+
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item"><a href="index.html#about" class="header__nav-link">ABOUT</a></li>
+                        <li class="header__nav-item"><a href="index.html#support" class="header__nav-link">SUPPORT</a>
+                        </li>
+                        <li class="header__nav-item"><a href="index.html#blog" class="header__nav-link">BLOG</a></li>
+                        <li class="header__nav-item"><a href="index.html#faq" class="header__nav-link">FAQ</a></li>
+                    </ul>
+                </nav>
+
+                <!-- PC表示用のお問合せボタン -->
+                <div class="header__contact">
+                    <a href="#contact.html" class="header__contact-link">お問合わせ</a>
+                </div>
+            </div>
+
+            <!-- スマホ表示用--下部ボタン -->
+            <div class="header__mobile-cta">
+                <a href="tel:0470000000" class="header__phone-link">
+                    <span aria-hidden="true">☎</span>
+                    お電話
+                </a>
+                <a href="contact.html" class="header__mail-link">
+                    <span aria-hidden="true">✉</span>
+                    お問合せ
+                </a>
+            </div>
+        </div>
+
+        <!-- ハンバーガーボタン -->
+        <div class="toggle_btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- スマホメニューの背景 -->
+        <div id="mask"></div>
+    </header>
+
+    <main>
+        <section class="fv fv--contact">
+            <div class="fv__inner">
+                <!--PC用メインビジュアル-->
+                <div class="fv__image-wrapper-pc">
+                    <img src="img/fv.jpeg" alt="手をつないで外で過ごす子どもたちと大人たち" class="fv__image">
+                </div>
+
+                <!--スマホ用メインビジュアル-->
+                <div class="fv__image-wrapper-sp">
+                    <img src="img/sp_fv.JPG" alt="手をつないで外で過ごす子どもたちと大人たち" class="fv__image">
+                </div>
+
+                <div class="fv__content">
+                    <h1 class="fv__title">CONTACT</h1>
+                    <p class="fv__subtitle">
+                        ご見学・ご相談をご希望の方は、下記フォームからお気軽にお問合せください
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!--CONTACT-->
+        <section id="contact" class="contact">
+            <div class="contact__inner">
+
+                <form id="contact-form" class="contact__form">
+
+                    <!-- お名前 -->
+                    <div class="contact__field">
+                        <div class="contact__label-wrapper">
+                            <label class="contact__label" for="last-name">お名前</label>
+                            <span class="contact__required">※必須</span>
+                        </div>
+
+                        <div class="contact__name-fields">
+                            <input type="text" id="last-name" name="lastName"
+                                class="contact__input contact__input--name" placeholder="姓" autocomplete="family-name"
+                                required>
+
+                            <input type="text" id="first-name" name="firstName"
+                                class="contact__input contact__input--name" placeholder="名" autocomplete="given-name"
+                                aria-label="名" required>
+                        </div>
+                    </div>
+
+                    <!-- 電話番号 -->
+                    <div class="contact__field">
+                        <div class="contact__label-wrapper">
+                            <label class="contact__label" for="tel">お電話番号</label>
+                            <span class="contact__required">※必須</span>
+                        </div>
+
+                        <input type="tel" id="tel" name="tel" class="contact__input" placeholder="ハイフンなし"
+                            autocomplete="tel" inputmode="tel" required>
+                    </div>
+
+                    <!-- メールアドレス -->
+                    <div class="contact__field">
+                        <div class="contact__label-wrapper">
+                            <label class="contact__label" for="email">メールアドレス</label>
+                            <span class="contact__required">※必須</span>
+                        </div>
+
+                        <input type="email" id="email" name="email" class="contact__input" autocomplete="email"
+                            required>
+                    </div>
+
+                    <!-- お問い合わせ内容 -->
+                    <div class="contact__field">
+                        <div class="contact__label-wrapper">
+                            <label class="contact__label" for="message">お問合せ内容</label>
+                            <span class="contact__required">※必須</span>
+                        </div>
+
+                        <textarea id="message" name="message" class="contact__textarea" required></textarea>
+                    </div>
+
+                    <!-- プライバシーポリシー -->
+                    <div class="contact__field contact__field--privacy">
+                        <p class="contact__label">プライバシーポリシー</p>
+
+                        <div id="privacy-policy" class="contact__privacy-text" tabindex="0">
+                            <p>
+                                Te to Te 教育支援センター（以下、「当教室」といいます。）は、
+                                お子さまおよび保護者の皆さまに安心してご相談いただけるよう、
+                                個人情報の保護を重要な責務と考え、以下の方針に基づき適切に
+                                取り扱います。
+                            </p>
+
+                            <p>
+                                お問い合わせフォームからお預かりした氏名、電話番号、
+                                メールアドレスなどの個人情報は、お問い合わせへの回答、
+                                ご相談および見学のご案内に必要な範囲で利用します。
+                            </p>
+
+                            <p>
+                                法令に基づく場合を除き、ご本人の同意なく個人情報を
+                                第三者へ提供することはありません。
+                            </p>
+                        </div>
+
+                        <label class="contact__agreement">
+                            <input type="checkbox" name="privacyAgreement" value="同意する" class="contact__checkbox"
+                                required aria-describedby="privacy-policy">
+                            <span>プライバシーポリシーを確認し、同意します</span>
+                        </label>
+                    </div>
+
+                    <!-- 送信ボタン -->
+                    <div class="contact__button-wrapper">
+                        <button type="submit" class="contact__submit">
+                            送信
+                        </button>
+
+                        <p id="contact-message" class="contact__message" role="status" aria-live="polite"></p>
+                    </div>
+
+                </form>
+            </div>
+
+        </section>
+
+        <!-- HOMEボタン -->
+        <div class="contact__home">
+            <a href="index.html" class="contact__home-link">
+                HOME
+            </a>
+        </div>
+
+    </main>
+
+    <!--FOOTER-->
+    <footer id="footer">
+        <div class="footer__inner-wrapper">
+
+            <!-- 左側：施設情報 -->
+            <div class="footer__info">
+                <a href="#" class="footer__logo">
+                    <img src="img/logo.png" alt="Te to Te 教育支援センター" class="footer__logo-image">
+                </a>
+
+                <address class="footer__address">
+                    <p class="footer__postal">〒XXX-XXXX</p>
+                    <p class="footer__location">神奈川県横浜市XX区XX</p>
+                    <p class="footer__tel">
+                        <a href="tel:047XXXXXXXX" class="footer__tel-link">
+                            047-XXXX-XXXX
+                        </a>
+                    </p>
+                    <p class="footer__hours">9:00〜15:00</p>
+                    <p class="footer__note">
+                        ※受付時間外はお問い合わせフォーム<br>
+                        をご利用ください。
+                    </p>
+                </address>
+            </div>
+
+            <!-- 右側：案内文・リンク -->
+            <div class="footer__content">
+                <p class="footer__lead">
+                    ご不安なことは、お気軽にご相談ください。<br>
+                    ご見学・ご相談は無料です。
+                </p>
+
+                <nav class="footer__nav" aria-label="フッターナビゲーション">
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item">
+                            <a href="index.html#faq" class="footer__nav-link">よくある質問</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#" class="footer__nav-link">プライバシーポリシー</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
+        <div class="footer__bottom">
+            <small class="footer__copyright">&copy;Te to Te</small>
+        </div>
+    </footer>
+
+    <!-- ページトップボタン -->
+    <a href="#" id="page-top" class="page-top" aria-label="ページ上部へ戻る">
+        <span class="page-top__arrow" aria-hidden="true"></span>
+        <span class="page-top__text">Top</span>
+    </a>
+
+
+    <!-- jQueryを先に読み込む -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- 自分のJavaScriptを後に読み込む -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

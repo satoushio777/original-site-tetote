@@ -5,13 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="学校以外の第三の居場所、教育支援室。">
-    <title>Te to Te</title>
+    <title>Te to Te (テトテ)</title>
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+
+    <!-- Slickの基本CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+
+    <!-- Slickの矢印・ドット用CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
     <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="img/favicon2.png">
+    <link rel="shortcut icon" href="img/favicon.png">
 
 </head>
 
@@ -19,13 +25,15 @@
     <!--HEADER-->
     <header id="header">
         <div class="header__inner">
-            <h1 class="header__logo">
+
+            <div class="header__logo">
                 <a href="#" class="header__logo-link">
                     <img src="img/logo.png" alt="Te to Te" class="header__logo-image">
                 </a>
-            </h1>
+            </div>
             <!--nav-->
             <div class="nav__content">
+
                 <nav class="header__nav">
                     <ul class="header__nav-list">
                         <li class="header__nav-item"><a href="#about" class="header__nav-link">ABOUT</a></li>
@@ -35,26 +43,54 @@
                     </ul>
                 </nav>
 
+                <!-- PC表示用のお問合せボタン -->
                 <div class="header__contact">
-                    <a href="#contact" class="header__contact-link">お問合わせ</a>
+                    <a href="contact.html" class="header__contact-link">お問合わせ</a>
                 </div>
             </div>
 
+            <!-- スマホ表示用--下部ボタン -->
+            <div class="header__mobile-cta">
+                <a href="tel:0470000000" class="header__phone-link">
+                    <span aria-hidden="true">☎</span>
+                    お電話
+                </a>
+                <a href="contact.html" class="header__mail-link">
+                    <span aria-hidden="true">✉</span>
+                    お問合せ
+                </a>
+            </div>
         </div>
+
+        <!-- ハンバーガーボタン -->
+        <div class="toggle_btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- スマホメニューの背景 -->
+        <div id="mask"></div>
     </header>
 
     <main>
         <section class="fv">
             <div class="fv__inner">
-                <div class="fv__image-wrapper">
+                <!--PC用メインビジュアル-->
+                <div class="fv__image-wrapper-pc">
                     <img src="img/fv.jpeg" alt="手をつないで外で過ごす子どもたちと大人たち" class="fv__image">
                 </div>
 
+                <!--スマホ用メインビジュアル-->
+                <div class="fv__image-wrapper-sp">
+                    <img src="img/sp_fv.JPG" alt="手をつないで外で過ごす子どもたちと大人たち" class="fv__image">
+                </div>
+
                 <div class="fv__content">
-                    <p class="fv__catch">
+                    <h1 class="fv__catch">
                         手と手を合わせて<br>
                         つながる心
-                    </p>
+                    </h1>
                     <p class="fv__subcatch">
                         学校に行きづらい小中学生とその保護者のための居場所
                     </p>
@@ -66,9 +102,6 @@
         <div class="about__out">
             <section id="about" class="wrapper">
                 <div class="about__inner">
-
-                    <!-- <h2 class="about__title">ABOUT</h2> -->
-
                     <div class="about__body">
                         <div class="flex-left">
                             <h2 class="about__title">ABOUT</h2>
@@ -99,22 +132,23 @@
                         <h3 class="about__sub-title">
                             こんな想いを抱えていませんか？
                         </h3>
+                        <div class="sub-title__line"></div>
 
                         <div class="about__chat-list">
 
-                            <div class="about__chat-item--left">
+                            <div class="about__chat-item--left inview-slide-left">
                                 <img src="img/about/cry.png" alt="朝になると体調が悪くなる子">
                                 <p class="about__chat-text">朝になると体調が悪くなる…</p>
                             </div>
 
-                            <div class="about__chat-item--right">
+                            <div class="about__chat-item--right inview-slide-right">
                                 <p class="about__chat-text">
                                     学校に行きたいけど行けない…
                                 </p>
                                 <img src="img/about/home_girl.png" alt="学校に行きたいけど行けない子">
                             </div>
 
-                            <div class="about__chat-item--left">
+                            <div class="about__chat-item--left inview-slide-left">
                                 <img src="img/about/cry2.png" alt="学校以外の場所はないのかな">
                                 <p class="about__chat-text">
                                     学校以外の場所はないのかな？
@@ -140,6 +174,7 @@
                         <h3 class="about__sub-title">
                             Te to Teが大切にしていること
                         </h3>
+                        <div class="sub-title__line"></div>
 
                         <!--Point３つ-->
                         <ol class="about__point">
@@ -151,11 +186,11 @@
                                             <span class="point__badge-label">Point</span>
                                             <span class="point__badge-num">1</span>
                                         </p>
-                                        <img src="img/about/alignment.png">
+                                        <img src="img/about/alignment2.png" alt="学校・行政との連携">
                                     </figure>
 
                                     <div class="point__textbox" role="note">
-                                        <p class="point__titile">学校・行政との連携</p>
+                                        <p class="point__title">学校・行政との連携</p>
                                         <p class="point__description">学校や関係機関と連携しながら、お子さまに合った支援を行います。</p>
                                     </div>
                                 </div>
@@ -172,8 +207,8 @@
                                     </figure>
 
                                     <div class="point__textbox" role="note">
-                                        <p class="point__titile">無理に登校を促しません</p>
-                                        <p class="point__description">「学校に戻すこと」だけを目的にせず、心の回復を大切にしています。</p>
+                                        <p class="point__title">無理に登校を促しません</p>
+                                        <p class="point__description">学校に戻すことだけを目的にせず、心の回復を大切にしています。</p>
                                     </div>
                                 </div>
                             </li>
@@ -189,7 +224,7 @@
                                     </figure>
 
                                     <div class="point__textbox" role="note">
-                                        <p class="point__titile">小さな一歩を尊重</p>
+                                        <p class="point__title">小さな一歩を尊重</p>
                                         <p class="point__description">その子のペースを大切にし、安心できる居場所づくりを行っています。</p>
                                     </div>
                                 </div>
@@ -210,9 +245,9 @@
 
             <!--SUPPORT--説明--モーダル-->
             <section class="support__explanation">
-                <h3 class="support__attention">学校生活への復帰や社会的自立を目指します</h3>
+                <h3 class="support__title">学校生活への復帰や社会的自立を目指します</h3>
 
-                <ul class="teacher-content-item">
+                <ul class="support__content-item">
                     <!-- 学習支援----------------------------->
                     <li>
                         <div class="support__content-img js-open-teacher-modal">
@@ -231,8 +266,11 @@
                                     <div class="teacher-modal-body">
                                         <p class="teacher-modal-name">学習支援</p>
                                         <p class="teacher-text">
-                                            学校の教材や各自用意した教材を使用して自習形式で学習をすることができます。<br>
-                                            不登校児童生徒の可能性を引き出し、目標に向かって努力する契機をつくるとともに、自ら進んで学習する姿勢を養います。 </p>
+                                            学校の教材や各自用意した教材を使用して自習形式で学習をすることができます。
+                                        </p>
+                                        <p class="teacher-text">
+                                            不登校児童生徒の可能性を引き出し、目標に向かって努力する契機をつくるとともに、自ら進んで学習する姿勢を養います。
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -258,9 +296,10 @@
                                     <div class="teacher-modal-body">
                                         <p class="teacher-modal-name">適度な運動</p>
                                         <p class="teacher-text">
-                                            リラックスできるように、簡単な運動（フラフープ、ストレッチ、縄跳び）に使える空きスペースを用意しています。<br>
-                                            卓球、サッカー、バドミントン<br>
-                                            絵画、裁縫、図工、ボードゲーム、カードゲームなどが出来ます。
+                                            リラックスできるように、簡単な運動（フラフープ、ストレッチ、縄跳び）に使える空きスペースを用意しています。
+                                        </p>
+                                        <p class="teacher-text">
+                                            卓球、サッカー、バドミントン、絵画、裁縫、図工、ボードゲーム、カードゲームなどが出来ます。
                                         </p>
                                     </div>
                                 </div>
@@ -279,7 +318,7 @@
                             <div class="teacher-modal-container">
                                 <div class="teacher-modal-content">
                                     <div class="teacher-modal-header">
-                                        <button class="teacher-modal-close js-close-teacher-modal">
+                                        <button type="button" class="teacher-modal-close js-close-teacher-modal">
                                             <span class="close-icon">✖</span>
                                             <span class="close-text">close</span>
                                         </button>
@@ -299,7 +338,7 @@
 
             <!--SUPPORT--タイムスケジュール-->
             <section class="support__schedule">
-                <h3 class="support__attention">一日のスケジュール</h3>
+                <h3 class="support__title">一日のスケジュール</h3>
 
                 <div class="schedule__content">
 
@@ -582,16 +621,6 @@
                                     <h4 class="schedule-card__title">終了</h4>
                                 </div>
 
-                                <!-- ▼ -->
-                                <div class="schedule-card__arrow">
-                                    <span class="schedule-card__triangle"></span>
-                                    <span class="schedule-card__triangle"></span>
-                                    <span class="schedule-card__triangle"></span>
-                                    <span class="schedule-card__triangle"></span>
-                                    <span class="schedule-card__triangle"></span>
-                                    <span class="schedule-card__triangle"></span>
-                                </div>
-
                             </div><!-- 本体の閉じタグ -->
 
                         </div><!-- 15:00 終了の閉じタグ-->
@@ -608,7 +637,7 @@
                 <!-- 見出し -->
                 <div class="support__heading">
                     <h3 class="support__title">指導員紹介</h3>
-                    <p class="support__subtitle">
+                    <p class="section-subtitle">
                         3名の教員免許所持者と1名のソーシャルワーカーが在中しています
                     </p>
                 </div>
@@ -618,7 +647,7 @@
 
                     <!-- 指導員画像 -->
                     <div class="support__instructor-fade">
-                        <img src="./img/support/teacher1.png" alt="指導員1" class="support__instructor-image is-active">
+                        <img src="./img/support/teacher1.png" alt="指導員1" class="support__instructor-image">
                         <img src="./img/support/teacher2.png" alt="指導員2" class="support__instructor-image">
                         <img src="./img/support/teacher3.png" alt="指導員3" class="support__instructor-image">
                         <img src="./img/support/socialworker.png" alt="ソーシャルワーカー" class="support__instructor-image">
@@ -636,10 +665,10 @@
                                 子ども自らの意思決定を待ちます
                             </li>
                             <li class="support__policy-item">
-                                子どもが自分で計画し、実行するのを待ちます
+                                児童も保護者の相談も可能です
                             </li>
                             <li class="support__policy-item">
-                                児童も保護者の相談も可能です。
+                                子どもが自分で計画し、実行するのを待ちます
                             </li>
                         </ul>
                     </div>
@@ -663,10 +692,9 @@
                 <div class="blog__slider">
                     <!-- article 01-->
                     <article class="blog-card">
-                        <a href="#" class="blog-card__link">
-
+                        <a href="blog.html" class="blog__link">
                             <figure class="blog-card__image">
-                                <img src="img/blog/products.png" alt="創作作品の画像" class="blog-card__img">
+                                <img src="img/blog/blog01.png" alt="創作作品の画像" class="blog-card__img">
                             </figure>
 
                             <time class="blog-card__date" datetime="2026-xx-xx">2026/xx/xx</time>
@@ -677,10 +705,10 @@
 
                     <!-- article 02-->
                     <article class="blog-card">
-                        <a href="#" class="blog-card__link">
+                        <a href="blog.html" class="blog-card__link">
 
                             <figure class="blog-card__image">
-                                <img src="img/blog/fish.png" alt="メダカ" class="blog-card__img">
+                                <img src="img/blog/blog02.png" alt="メダカ" class="blog-card__img">
                             </figure>
 
                             <time class="blog-card__date" datetime="2026-xx-xx">2026/xx/xx</time>
@@ -691,10 +719,24 @@
 
                     <!-- article 03-->
                     <article class="blog-card">
-                        <a href="#" class="blog-card__link">
+                        <a href="blog.html" class="blog-card__link">
 
                             <figure class="blog-card__image">
-                                <img src="img/blog/flower.png" alt="菜の花畑" class="blog-card__img">
+                                <img src="img/blog/blog03.png" alt="菜の花畑" class="blog-card__img">
+                            </figure>
+
+                            <time class="blog-card__date" datetime="2026-xx-xx">2026/xx/xx</time>
+
+                            <h3 class="blog-card__title">ふれあいタイムで春を見つけました</h3>
+                        </a>
+                    </article>
+
+                    <!-- article 04-->
+                    <article class="blog-card">
+                        <a href="blog.html" class="blog-card__link">
+
+                            <figure class="blog-card__image">
+                                <img src="img/blog/blog04.png" alt="春の花" class="blog-card__img">
                             </figure>
 
                             <time class="blog-card__date" datetime="2026-xx-xx">2026/xx/xx</time>
@@ -707,7 +749,7 @@
 
                 <!-- ブログページへのリンク -->
                 <div class="readmore">
-                    <a href="#">Blogをすべて見る</a>
+                    <a href="blog.html">Blogをすべて見る</a>
                 </div>
             </div>
         </section>
@@ -725,7 +767,7 @@
             <ul class="faq__list">
                 <!-- Q1 -->
                 <li class="faq__item">
-                    <button class="faq__question" type="button">
+                    <button class="faq__question" type="button" aria-expanded="false">
                         <span class="faq__label">Q</span>
                         <span class="faq__question-text">料金はかかりますか？</span>
                         <span class="faq__icon"></span><!--疑似要素で＋－を作るため-->
@@ -739,9 +781,9 @@
 
                 <!-- Q2 -->
                 <li class="faq__item">
-                    <button class="faq__question" type="button">
+                    <button class="faq__question" type="button" aria-expanded="false">
                         <span class="faq__label">Q</span>
-                        <span class="faq__question">こちらに登校すれば出席扱いになりますか？</span>
+                        <span class="faq__question-text">こちらに登校すれば出席扱いになりますか？</span>
                         <span class="faq__icon"></span><!--疑似要素で＋－を作るため-->
                     </button>
 
@@ -753,9 +795,9 @@
 
                 <!-- Q3 -->
                 <li class="faq__item">
-                    <button class="faq__question" type="button">
+                    <button class="faq__question" type="button" aria-expanded="false">
                         <span class="faq__label">Q</span>
-                        <span class="faq__question">ソーシャルワーカーはどんな支援に繋がりますか？</span>
+                        <span class="faq__question-text">ソーシャルワーカーはどんな支援に繋がりますか？</span>
                         <span class="faq__icon"></span><!--疑似要素で＋－を作るため-->
                     </button>
 
@@ -767,9 +809,9 @@
 
                 <!-- Q4 -->
                 <li class="faq__item">
-                    <button class="faq__question" type="button">
+                    <button class="faq__question" type="button" aria-expanded="false">
                         <span class="faq__label">Q</span>
-                        <span class="faq__question">どうすれば通室できますか？</span>
+                        <span class="faq__question-text">どうすれば通室できますか？</span>
                         <span class="faq__icon"></span><!--疑似要素で＋－を作るため-->
                     </button>
 
@@ -785,7 +827,7 @@
 
     <!--FOOTER-->
     <footer id="footer">
-        <div class="footer__inner wrapper">
+        <div class="footer__inner-wrapper">
 
             <!-- 左側：施設情報 -->
             <div class="footer__info">
@@ -801,7 +843,7 @@
                             047-XXXX-XXXX
                         </a>
                     </p>
-                    <p class="footer__hours">受付時間 9:00〜15:00</p>
+                    <p class="footer__hours">9:00〜15:00</p>
                     <p class="footer__note">
                         ※受付時間外はお問い合わせフォーム<br>
                         をご利用ください。
@@ -809,14 +851,11 @@
                 </address>
             </div>
 
-            <!-- 縦線 -->
-            <div class="footer__divider" aria-hidden="true"></div>
-
             <!-- 右側：案内文・リンク -->
             <div class="footer__content">
                 <p class="footer__lead">
                     ご不安なことは、お気軽にご相談ください。<br>
-                    見学・ご相談は無料です。
+                    ご見学・ご相談は無料です。
                 </p>
 
                 <nav class="footer__nav" aria-label="フッターナビゲーション">
@@ -825,7 +864,7 @@
                             <a href="#faq" class="footer__nav-link">よくある質問</a>
                         </li>
                         <li class="footer__nav-item">
-                            <a href="#" class="footer__nav-link">プライバシーポリシー</a>
+                            <a href="contact.html#" class="footer__nav-link">プライバシーポリシー</a>
                         </li>
                     </ul>
                 </nav>
@@ -838,10 +877,19 @@
         </div>
     </footer>
 
-    <a href="#" class="page-top">
-        <p class="pabe-top__text">Top</p>
+    <!-- ページトップボタン -->
+    <a href="#" id="page-top" class="page-top" aria-label="ページ上部へ戻る">
+        <span class="page-top__arrow" aria-hidden="true"></span>
+        <span class="page-top__text">Top</span>
     </a>
 
+
+    <!-- jQueryを先に読み込む -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Slick -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- 自分のJavaScriptを後に読み込む -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
