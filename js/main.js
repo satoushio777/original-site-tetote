@@ -222,88 +222,41 @@ $(function () {
     });
 
 
-
     /*=================================================
     ページトップボタン--スムーズスクロールの設定
     ===================================================*/
-    // 最初は非表示
-    const $pageTop = $("#page-top");
 
-    $pageTop.hide();
+    let pagetop = $("#page-top");
 
-    $(window).on("scroll load resize", function () {
+    // 最初に画面が表示された時は、トップに戻るボタンを非表示に設定
+    pagetop.hide();
 
-        const scrollTop = $(window).scrollTop();
-        const windowBottom = scrollTop + $(window).height();
+    // スクロールイベント（スクロールされた際に実行）
+    $(window).scroll(function () {
 
-        let showPageTop = false;
+        // スクロール位置が700pxを超えた場合
+        if ($(this).scrollTop() > 700) {
 
-        /*
-        TOPページ
-        .about__bodyの下端付近まで来たら表示
-        */
-        if ($(".about__body").length) {
+            // トップに戻るボタンを表示する
+            pagetop.fadeIn();
 
-            const aboutBodyBottom =
-                $(".about__body").offset().top
-                + $(".about__body").outerHeight();
-
-            showPageTop = windowBottom > aboutBodyBottom - 100;
-
-            /*
-            下層ページ
-            footerが画面内に入ったら表示
-            */
-        } else if ($("footer").length) {
-
-            const footerTop = $("footer").offset().top;
-
-            showPageTop = windowBottom > footerTop;
-        }
-
-        // 判定結果に応じて表示・非表示
-        if (showPageTop) {
-            $pageTop.stop(true, true).fadeIn(300);
+            // スクロール位置が700px以下の場合
         } else {
-            $pageTop.stop(true, true).fadeOut(300);
+
+            // トップに戻るボタンを非表示にする
+            pagetop.fadeOut();
         }
-
-
-        //(aboutのボトムから表示バージョン)
-        // 最初は非表示
-        // $("#page-top").hide();
-
-        // スクロールしたときの表示・非表示
-        // $(window).on("scroll", function () {
-
-        // ABOUTセクションの下端位置を取得
-        // const aboutBodyBottom =
-        //     $(".about__body").offset().top + $(".about__body").outerHeight();
-
-        // 現在表示している画面の下端位置
-        // const windowBottom =
-        //     $(this).scrollTop()
-        //     + $(window).height();
-
-        // about__bodyの下端付近まで来たら表示
-        // if (windowBottom > aboutBodyBottom - 100) {
-        //     $("#page-top").fadeIn();
-        // } else {
-        //     $("#page-top").fadeOut();
-        // }
-
-        // if ($(this).scrollTop() > aboutBottom - 100) {
-        //     $("#page-top").fadeIn();
-        // } else {
-        //     $("#page-top").fadeOut();
-        // }
     });
 
+    // クリックイベント（ボタンがクリックされた際に実行）
+    pagetop.click(function () {
 
-    //(300進んでから表示バージョン)
-    // 最初は非表示
-    // $("#page-top").hide();
+        // 0.5秒かけてページトップへ移動
+        $("body,html").animate({ scrollTop: 0 }, 500);
 
+        // aタグ本来の動作を止める
+        return false;
+    });
 
     /*=================================================
     スムーススクロール

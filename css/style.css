@@ -474,7 +474,6 @@ main---ABOUT---お悩み
     padding: 40px;
     border-radius: 20px;
     margin-inline: 20px;
-    height: 100px;
     line-height: 0.6;
     position: relative;
 }
@@ -1059,7 +1058,6 @@ SUPPORT 指導員紹介
 ================================= */
 .support__policy {
     width: 48%;
-    height: 320px;
     background-color: #D3EDBF;
     border-radius: 20px;
     padding: 40px;
@@ -2320,6 +2318,7 @@ SP  CONTACT/BLOGページのメインビジュアル  -fv--
 
 .about__chat-text {
     padding : 40px 10px;
+    line-height: 1.2;
 }
 
 
