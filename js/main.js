@@ -25,12 +25,6 @@ $(function () {
 
     });
 
-    // ヘッダーに対してopenクラスを付与
-    // openクラスがついているときはopenクラスを削除
-    // toogleClassメソッドはその両方を行う
-    // $("#nav a").on("click", function () {
-    //     $("header").toggleClass("open");
-    // });
 
     /*=================================================
         下部CTAをクリックした時
@@ -189,14 +183,6 @@ $(function () {
     }
 
 
-    /* これより下にCONTACTの処理 */
-    // const contactForm = document.getElementById("contact-form");
-
-    // CONTACTページ以外では処理しない
-    // if (!contactForm) {
-    //     return;
-    // }
-
     /*=================================================
     FAQ  アコーディオンの開閉
     =================================================*/
@@ -234,13 +220,13 @@ $(function () {
     // スクロールイベント（スクロールされた際に実行）
     $(window).scroll(function () {
 
-        // スクロール位置が1600pxを超えた場合
-        if ($(this).scrollTop() > 1600) {
+        // スクロール位置が1200pxを超えた場合
+        if ($(this).scrollTop() > 1200) {
 
             // トップに戻るボタンを表示する
             pagetop.fadeIn();
 
-            // スクロール位置が1600px以下の場合
+            // スクロール位置が1200px以下の場合
         } else {
 
             // トップに戻るボタンを非表示にする
@@ -276,28 +262,6 @@ $(function () {
         return false;
     });
 
-
-    // スクロールしたときの表示・非表示
-    // $(window).on("scroll", function () {
-    //     if ($(this).scrollTop() > 300) {
-    //         $("#page-top").fadeIn();
-    //     } else {
-    //         $("#page-top").fadeOut();
-    //     }
-    // });
-
-    // ページトップへスムーズスクロール
-    //$("#page-top").on("click", function (e) {
-    //    e.preventDefault(); // リンクのデフォルト動作（瞬間ジャンプ）を止める
-
-    //    $("html, body").animate(
-    //        { scrollTop: 0 },  // 一番上まで
-    //        400,               // 時間：400ミリ秒（0.4秒）
-    //600,               // 時間：600ミリ秒（0.6秒）
-    //        "linear"            // 動き:  常に同じ速さで動く
-    //"swing"            // 動き: 始めはゆっくり動いて、途中は速め、最後ゆっくり
-    //    );
-    //});
 
 
     const contactForm = document.getElementById("contact-form");
