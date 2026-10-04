@@ -5,6 +5,7 @@ html {
     /* font-size: 62.5%; */
     /*16px × 62.5% = 10pxです*/
     font-size: 100%;
+    overflow-x: hidden;/*スマホ表示時の横スクロールを防止*/
 	/*scroll-behavior: smooth; /*スムーズスクロール */
 }
 
