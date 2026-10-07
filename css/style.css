@@ -1225,45 +1225,6 @@ SUPPORT 指導員紹介
 }
 /* slickここまで */
 
-/* .blog-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(61, 55, 50, 0.18);
-    transition: all 0.3s ease;
-}
-
-.blog-card a {
-    color: inherit;
-}
-
-.blog-card h3 {
-    font-size: 1.2rem;
-    margin: 10px;
-    text-align: left;
-}
-
-.readmore {
-    text-align: center;
-    margin-top: 20px;
-} */
-
-/* .readmore a {
-    display: block;
-    width: 300px;
-    padding: 15px 0;
-    margin: auto;
-    background: #FF8200;
-    color: #FFF; */
-    /* text-align: center; */
-    /* font-weight: bold;
-    border-radius: 30px;
-}
-
-.readmore a:hover{
-    background: #FFF;
-    color: #FF8200;
-    border: 1px solid #FF8200;
-    transition: 0.9s;
-} */
 
 /* =================================
     FAQ
