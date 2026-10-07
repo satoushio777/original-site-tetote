@@ -2152,11 +2152,25 @@ background-color: #6FAF8F;
 /* ===============================
 SP    メインビジュアル
 ================================ */
+.fv {
+    height: 100svh;
+}
+
+.fv__inner {
+    height: 100%;
+}
+
 .fv__image-wrapper-pc {
     display: none;
 }
 .fv__image-wrapper-sp {
     display: block;
+    height: 100%;
+}
+
+.fv__image {
+    width: 100%;
+    height: 100%;
 }
 
 .fv__catch {
