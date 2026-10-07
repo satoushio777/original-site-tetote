@@ -1768,7 +1768,7 @@ SUPPORT 指導員紹介
     max-width: 1000px;
     margin: 0 auto;
     padding: 100px 3%;
-    padding-block: 100px;
+    /* padding-block: 100px; */
     display: flex;
     align-items: flex-end;
     font-size: 1rem;
